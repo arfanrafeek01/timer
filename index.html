@@ -28,7 +28,7 @@
             { id: 2, time: 750 },
             { id: 3, time: 600 },
             { id: 4, time: 600 },
-            { id: 5, time: 300 },
+            { id: 5, time: 300 },   
             { id: 6, time: 300 },
             { id: 7, time: 210 },
             { id: 8, time: 210 }
@@ -62,7 +62,7 @@
                             clearInterval(activeTimers[id].interval);
                             delete activeTimers[id];
                             button.textContent = `Timer ${id}`;
-                            alarm.play().catch(error => console.log('Audio playback failed:', error)); alert(`Timer ${id} is over!`);
+                            alarm.play().catch(error => console.log('Audio playback failed:', error)); document.title = `Timer ${id} is over!`;
                         } else {
                             button.textContent = formatTime(timeLeft);
                         }
